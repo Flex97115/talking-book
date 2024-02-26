@@ -1,0 +1,19 @@
+version: '3.9'
+
+networks:
+  net:
+    driver: bridge
+
+services:
+  chroma:
+    image: chromadb/chroma:latest
+    volumes:
+      - index_data:/chroma/.chroma/index
+    ports:
+      - "8000:8000"
+    networks:
+      - net
+
+volumes:
+  index_data:
+    driver: local

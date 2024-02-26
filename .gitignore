@@ -267,7 +267,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+app/.env
 .venv
 env/
 venv/
@@ -317,3 +317,4 @@ poetry.toml
 pyrightconfig.json
 
 playground.py
+app/.files/**
